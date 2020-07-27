@@ -20,7 +20,7 @@ architecture bench of GaussianFilter_tb is
           M31: in std_logic_vector(7 downto 0);
           M32: in std_logic_vector(7 downto 0);
           M33: in std_logic_vector(7 downto 0);
-          result: out std_logic_vector(11 downto 0));
+          result: out std_logic_vector(7 downto 0));
   end component;
 
   signal clk: std_logic;
@@ -34,10 +34,11 @@ architecture bench of GaussianFilter_tb is
   signal M31: std_logic_vector(7 downto 0);
   signal M32: std_logic_vector(7 downto 0);
   signal M33: std_logic_vector(7 downto 0);
-  signal result: std_logic_vector(11 downto 0);
+  signal result: std_logic_vector(7 downto 0);
 
-  constant clock_period: time := 1 sec;
+  constant clock_period: time := 5 ns;
   signal stop_the_clock: boolean;
+  constant pulse : time := 20 ns;
 
 begin
 
@@ -58,10 +59,49 @@ begin
   begin
 
     enable <= '1';
-    M11 <= "00000000";
+    M11 <= "11111111";
+    M12 <= "00000000";
+    M13 <= "00000000";
+    M21 <= "00000000";
+    M22 <= "00000000";
+    M23 <= "00000000";
+    M31 <= "00000000";
+    M32 <= "00000000";
+    M33 <= "11111111";
+    
+    wait for pulse*1;
+    
+    enable <= '1';
+    M11 <= "11111111";
+    M12 <= "11111111";
+    M13 <= "00000000";
+    M21 <= "00000000";
+    M22 <= "00000000";
+    M23 <= "00000000";
+    M31 <= "00000000";
+    M32 <= "00000000";
+    M33 <= "11111111";
+    
+    wait for pulse*1;
+    
+    enable <= '0';
+    M11 <= "11111111";
+    M12 <= "00000000";
+    M13 <= "00000000";
+    M21 <= "00000000";
+    M22 <= "00000000";
+    M23 <= "00000000";
+    M31 <= "00000000";
+    M32 <= "00000000";
+    M33 <= "11111111";
+    
+    wait for pulse*1;
+    
+    enable <= '1';
+    M11 <= "11111111";
     M12 <= "11111111";
     M13 <= "11111111";
-    M21 <= "00000000";
+    M21 <= "11111111";
     M22 <= "11111111";
     M23 <= "11111111";
     M31 <= "11111111";
