@@ -10,7 +10,7 @@ So we will use following as kernal for convolution.
 | 1 2 1 |
 ```
                
-               
+We have implemented Gassian filter in VHDL as wel as in Python to cross check.         
 
 
 
