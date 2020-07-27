@@ -11,7 +11,10 @@ So we will use following as kernal for convolution.
 ```
 The example convalution process given below
 
+
 ![Example](example.ppm)
+
+
                
 We have implemented Gassian filter in VHDL as wel as in Python to cross check.         
 
