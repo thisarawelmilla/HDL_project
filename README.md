@@ -9,7 +9,9 @@ So we will use following as kernal for convolution.
 | 2 4 2 | 
 | 1 2 1 |
 ```
-![Example](example.jpg)
+The example convalution process given below
+
+![Example](example.ppm)
                
 We have implemented Gassian filter in VHDL as wel as in Python to cross check.         
 
