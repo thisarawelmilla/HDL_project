@@ -12,7 +12,7 @@ So we will use following as kernal for convolution.
 The example convalution process given below
 
 
-![Example](example.ppm)
+![Example](example.jpg)
 
 
                
